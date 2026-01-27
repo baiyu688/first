@@ -1,0 +1,192 @@
+/* --- 所有文字等基础设置 --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Microsoft YaHei", "Songti SC", serif; /* 中文字体优先选用微软雅黑或宋体 */
+    background-color: #f4f1e8; /* 页面整体背景色，模仿纸张质感 */
+    color: #333;
+    line-height: 1.6;
+}
+a {display: flex;
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+header{display: flex;
+	background: linear-gradient(to right,#8AABCC,#F7C8CE,#f6dead,#F9D3E3,#BCD4E7);    /* 渐变背景*/
+	color: #fff;
+        padding:8px 10px;
+        justify-content: center;
+        align-items:center;
+        position: relative;
+        gap:66px;
+}
+.logo {text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 11px;
+    font-weight:bold;
+}
+nav ul {list-style: none;
+   gap:20px;
+   display: flex;/* 让列表项水平排列 */
+   justify-content: center; /*让导航栏居中 */
+}
+nav a {padding: 0 10px;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: grey; /* 鼠标悬停高亮 */
+}
+.sear {height:25px;
+}
+.love {margin-bottom: 20px;
+	width:100%;
+	height:600px;
+	background: url('./素材/景.png') center center no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;/*让容器内的子元素垂直排列*/
+        align-items: center;
+        color: white;
+        text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.love h1 {padding:20 10 0 0px;
+            font-size: 60px;
+            font-weight: bold;
+	    text-shadow: 3px 3px 5px rgba(0,0,0,1);
+            font-family: "Ma Shan Zheng", cursive; /* 书法字体效果 */
+ }
+.love h2{font-family: "KaiTi", "STXingkai", serif; /* 使用楷体或行楷模仿书法感 */
+	font-size: 18px;
+	text-shadow: 3px 3px 5px rgba(0,0,0,1);
+        font-weight: 300;}
+.love h3{font-family: "KaiTi", "STXingkai", serif; /* 使用楷体或行楷模仿书法感 */
+	font-size: 18px;
+	text-shadow: 3px 3px 5px rgba(0,0,0,1);
+        font-weight: 300;}
+.intro {display: flex;
+ 	justify-content: center;
+        border:2px double black;
+   	font-size: 16px;
+    	line-height: 1.8;
+    	color: #555;
+    	margin: 0 auto;
+    	gap: 20px;align-items:center;
+ max-width:1200px;}
+.left-col {
+  position: relative; /* 关键：建立坐标系 */
+  width: 300px;
+  height: 315px;
+  overflow: hidden; /* 可选：防止图片溢出 */
+}
+.left-col img {position: absolute;
+   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+}
+.lef {
+  position: relative; /* 关键：建立坐标系 */
+  width: 315px;
+  height: 315px;
+  overflow: hidden; /* 可选：防止图片溢出 */
+}
+.lef img {position: absolute;
+   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+}
+.a {opacity: 1;
+    z-index: 2;
+}
+.b{opacity: 0;
+    z-index: 1;
+}
+.left-col:hover .b{opacity: 1;}
+.lef:hover .b{opacity: 1;}
+.left-col:hover .a{opacity: 0;}
+.lef:hover .a{opacity: 0;}
+/* --- 分部(图) --- */
+.hot{padding:20px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    align-items:center;
+    text-align: center;
+    margin: 0 auto;
+}
+.container {
+    display: grid;/*开启网格布局,配合下面一行使用*/
+    grid-template-columns: repeat(4, 1fr); /*4列布局 */
+    gap: 20px;
+    padding: 60px 10%;
+    background-color: #f4f1e8;
+}
+.card{background: #fff
+	overflow: auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;}
+.card p {background: #fff
+	overflow: auto;
+	font-size:12px;}
+.card:hover {
+    transform: scale(1.1) translateY(-20px);
+}
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+footer {display: flex;
+    background-color: #1a2a6c;
+    color: #777;
+    padding: 40px 0 20px;
+    text-align: center;
+   }
+.footer1 {justify-content: space-around;/*空间平均分配给每个子元素的两侧*/
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+.footer1 h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.footer1 p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.c {background-color: #1a2a6c;
+    color: #777;
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #2a4d69;
+    padding: 10px;
+}
+/* --- 响应式设计 即为在手机上显示的比例调整 */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;  *平板改为两列 *
+    }
+    .highlight-item {
+        width: 100%;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+

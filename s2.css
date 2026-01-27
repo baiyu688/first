@@ -1,0 +1,40 @@
+header{text-align:center;
+	padding:5px;
+	background:#99CDD8;
+	color: white;}
+a{color:black;
+	line-height:30px;
+	font-size:15px;
+	background-color: white;
+	padding:15px;}
+body{font-family: Arial, sans-serif;   /*字体设置*/
+	 background-color: #f4f1e8; /* 页面整体背景色，模仿纸张质感 */
+	text-align: center;    /*文字居中*/
+        margin-top: 100px;      /*顶部外间距*/
+        transition: background-color 0.3s;
+	margin: 0 auto;}    /*背景过渡平滑*/
+img{margin: 0 auto;
+	overflow:auto;
+	max-width:300px;
+	max-height:320px;
+	padding:20px;}
+p {font-size:20px;}
+.btn {padding:10px 20px;
+	font-size:16px;
+	cursor:pointer;       /*点击样式*/
+	background-color:black;
+	color:white;
+	border:thick double grey;     /*按钮样子*/
+	border-radius:8px;}    /*圆角修饰，数值越大越圆*/
+.btn:hover {background-color:white;color:black;box-shadow: 0 2px 8px rgba(22,93,255,0.2);}
+.be {padding:10px 20px;
+	font-size:16px;
+	cursor:pointer;       /*点击样式*/
+	background-color:black;
+	color:white;
+	border:thick double grey;   /*按钮样子*/
+	border-radius:8px;}   /*圆角修饰，数值越大越圆*/
+.be:hover {background-color:white;color:black;box-shadow: 0 2px 8px rgba(22,93,255,0.2);}
+.deep {background: url("./素材/熊样式.png") center center;}
+
+
